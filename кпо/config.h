@@ -1,17 +1,19 @@
 #pragma once
 
+
 #ifndef CONFIG_H
 #define CONFIG_H
 
 
 
+#include <unordered_map>
 
 #include <string>
 #include <vector>
 
 
 
-
+using std::unordered_map;
 using std::string;
 
 using std::vector;
@@ -40,6 +42,7 @@ struct MessagePrototype
 
 
 
+unordered_map <string, MessagePrototype> arrayMessagePrototypes;
 
 
 
@@ -47,11 +50,10 @@ struct MessagePrototype
 
 
 
-int Configuration();
 
-void PrintArrayMessagePrototypes(vector<MessagePrototype> ms);
+void Configuration();
 
-bool if_find(string name);
+void PrintArrayMessagePrototypes(unordered_map <string, MessagePrototype> array);
 
 MessagePrototype GetMessagePrototype(string name);
 

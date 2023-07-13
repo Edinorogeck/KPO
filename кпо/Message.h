@@ -60,8 +60,7 @@ public:
     ~Message();
 
 private:
-    // Имя сообщения
-    std::string messageName;
+
     // Тип сообщения согласно стандарту
     std::string typeMessage;
     // Адрес ОУ

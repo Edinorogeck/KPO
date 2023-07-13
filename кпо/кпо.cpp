@@ -22,6 +22,7 @@ using std::endl;
 
 
 
+
 int main()
 {
     
@@ -40,7 +41,12 @@ int main()
 
     Configuration();
 
-    string messageName = "Вх.МКИО.15";
+    PrintArrayMessagePrototypes(arrayMessagePrototypes);
+
+
+
+
+    /*string messageName = "Вх.МКИО.15";
     
     MessagePrototype mp;
     mp = GetMessagePrototype(messageName);
@@ -68,6 +74,6 @@ int main()
         std::bitset<8> binary(c);
         binary_str += binary.to_string();
     }
-    cout << binary_str << endl;
+    cout << binary_str << endl;*/
 
 }

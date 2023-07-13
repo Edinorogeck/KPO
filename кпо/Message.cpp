@@ -26,7 +26,6 @@ Message::Message()
 
 Message::Message(MessagePrototype msProto)
 {
-    this->messageName = msProto.name;
     this->typeMessage = msProto.type;
     this->addressOY = msProto.address;
 
@@ -77,7 +76,7 @@ std::string Message::GetAddressOY()
 
 
 
-
+//
 //
 //std::tuple<Address, string> Message::MakeMessage()
 //{
@@ -106,8 +105,8 @@ std::string Message::GetAddressOY()
 //    }
 //    return std::tuple<Address, string>();
 //}
-
-
+//
+//
 
 
 
