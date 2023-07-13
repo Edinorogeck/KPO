@@ -14,7 +14,6 @@
 #include "Parameter.h"
 #include "config.h"
 
-
 struct Address
 {
     std::string address1;
@@ -28,11 +27,15 @@ class Message
 public:
 
     Message();
+    
     Message(MessagePrototype);
 
 
 
     void SetValues(std::string);
+
+    void SetValues(std::vector<BYTE>&);
+    
 
     // Вернуть адрес ОУ
     std::string GetAddressOY();
@@ -60,7 +63,8 @@ public:
     ~Message();
 
 private:
-
+    // Имя сообщения
+    std::string messageName;
     // Тип сообщения согласно стандарту
     std::string typeMessage;
     // Адрес ОУ

@@ -5,7 +5,9 @@
 #include <sstream>
 #include <bitset>
 #include <tuple>
+#include <vector>
 
+typedef unsigned char BYTE;
 
 using std::string;
 
@@ -20,12 +22,34 @@ using std::endl;
 using std::tuple;
 
 
+
+// функция преобразования вектора байт в бинарную строку
+string byteToBinaryString(vector<BYTE>& byteArray, int size) {
+    //std::ostringstream oss;
+    string str = "";
+    for (int i = 0; i < size; ++i) { // для каждого байта в массиве
+        str = str + std::bitset<8>(static_cast<unsigned int>(byteArray[i])).to_string();
+    }
+    return str; 
+}
+
+
+
+
+
+
+
+
+
+
+
 Message::Message()
 {
 }
 
 Message::Message(MessagePrototype msProto)
 {
+    this->messageName = msProto.name;
     this->typeMessage = msProto.type;
     this->addressOY = msProto.address;
 
@@ -62,6 +86,27 @@ void Message::SetValues(std::string valueStr)
     }    
 }
 
+void Message::SetValues(vector<BYTE>& data)
+{
+    //string strParametrValue = "";
+
+    int size = 0;
+
+    for (int i = 0; i < parametrsArray.size(); i++)
+    {
+        vector<BYTE> subVect;
+        for (int j = 0; j < (parametrsArray[i].GetSize() / 8); j++)
+        {
+            subVect.push_back(data[size + j]);
+        }
+        size += parametrsArray[i].GetSize() / 8;
+        //cout << byteToBinaryString(subVect, parametrsArray[i].GetSize() / 8) << endl;
+
+        parametrsArray[i].SetValue(byteToBinaryString(subVect, parametrsArray[i].GetSize() / 8));
+        subVect.clear();
+    }
+}
+
 std::string Message::GetAddressOY()
 {
     if (this->typeMessage == "МКИО")
@@ -76,7 +121,7 @@ std::string Message::GetAddressOY()
 
 
 
-//
+
 //
 //std::tuple<Address, string> Message::MakeMessage()
 //{
@@ -105,8 +150,8 @@ std::string Message::GetAddressOY()
 //    }
 //    return std::tuple<Address, string>();
 //}
-//
-//
+
+
 
 
 

@@ -5,11 +5,13 @@
 #include "config.h"
 #include "Message.h"
 #include "Parameter.h"
+#include "conv_functions.cpp"
 #include <bitset>
+#include <ostream>
 
 
 
-
+typedef unsigned char BYTE;
 
 
 
@@ -22,34 +24,21 @@ using std::endl;
 
 
 
-
 int main()
 {
-    
-    string tip_s = "11";
-    string Rez = "1";
-    string rezerv = "01010";
-    string nom_cikl = "00110011";
-    string CV_TekVrem_U32 = "00000000111111110000000011111111";
-    string CRC16 = "0000111100001111";
 
-    string msString = tip_s + Rez + rezerv + nom_cikl +
-        CV_TekVrem_U32 + CRC16;
+    vector<BYTE> data = { 77, 88, 99, 110, 120, 130, 140 };
 
-    
-    cout << msString << endl;
-
+  
     Configuration();
 
-    PrintArrayMessagePrototypes(arrayMessagePrototypes);
-
-
-
-
-    /*string messageName = "Вх.МКИО.15";
+    string messageName = "Вх.МКИО.766";
     
     MessagePrototype mp;
     mp = GetMessagePrototype(messageName);
+
+
+    
 
 
 
@@ -61,19 +50,12 @@ int main()
     cout << mp.type << endl;
     cout << ms.GetAddressOY() << endl;
 
-    ms.SetValues(msString);
-    ms.PrintMessage();
+   
+    ms.SetValues(data);
+
+    
 
 
 
-    cout << "---------------" << endl;
-
-    std::string binary_str = "";
-
-    for (char c : msString) {
-        std::bitset<8> binary(c);
-        binary_str += binary.to_string();
-    }
-    cout << binary_str << endl;*/
 
 }

@@ -1,19 +1,17 @@
 #pragma once
 
-
 #ifndef CONFIG_H
 #define CONFIG_H
 
 
 
-#include <unordered_map>
 
 #include <string>
 #include <vector>
 
+typedef unsigned char BYTE;
 
 
-using std::unordered_map;
 using std::string;
 
 using std::vector;
@@ -22,7 +20,12 @@ using std::vector;
 extern string MAIN_PATH;
 extern string CONFIGURATION_FILE;
 
-int CMR = 4;
+
+
+const int negative_coding = 1;
+const double low_order_cost = 0.17;
+
+const double CMR = 4;
 
 
 
@@ -32,10 +35,15 @@ struct ParametrData
     string parametrSize;
 };
 
+struct MessagePrototype
+{
+    string name;
+    string type;
+    vector<string> address;
+    vector<ParametrData> messageData;
+};
 
 
-
-unordered_map <string, MessagePrototype> arrayMessagePrototypes;
 
 
 
@@ -46,7 +54,9 @@ unordered_map <string, MessagePrototype> arrayMessagePrototypes;
 
 void Configuration();
 
-void PrintArrayMessagePrototypes(unordered_map <string, MessagePrototype> array);
+void PrintArrayMessagePrototypes();
+
+bool if_find(string name);
 
 MessagePrototype GetMessagePrototype(string name);
 

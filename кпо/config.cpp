@@ -8,7 +8,7 @@
 
 #include <filesystem>
 
-
+#include <locale>
 
 using std::ios;
 
@@ -30,7 +30,7 @@ string MAIN_PATH = "Configuration_folder/";
 string CONFIGURATION_FILE = "Configuration_file.txt";
 
 
-//vector<MessagePrototype> arrayMessagePrototypes;
+vector<MessagePrototype> arrayMessagePrototypes;
 
 
 void Configuration()
@@ -62,15 +62,27 @@ void Configuration()
 
 
 
+  
+
+
+
+
+
+
+
     // 
     // Блок объявления локальных переменных
     //
 
 
 
+
+
+
     // Вывод на экран названий файлов сообщений
     while (getline(configurationFile, line))
     {
+
 
         MessagePrototype ms;
 
@@ -106,8 +118,8 @@ void Configuration()
 
 
         // Заполнение структуры
-        string name = GetMessageName(arrayMessageLine[1]);
-        ms.type = GetMessageType(name);
+        ms.name = GetMessageName(arrayMessageLine[1]);
+        ms.type = GetMessageType(ms.name);
         ms.address = GetMessageAddress(arrayMessageLine[2], ms.type);
 
         for (int i = 3; i < arrayMessageLine.size(); i++)
@@ -126,7 +138,7 @@ void Configuration()
 
 
         // Добавление структуры в массив структур
-        arrayMessagePrototypes[name] = ms;
+        arrayMessagePrototypes.push_back(ms);
         messageFile.close();
     }
 
@@ -169,22 +181,45 @@ void Configuration()
     configurationFile.close();
 }
 
-// Вывод на экран вектора конфигураций сообщений
-void PrintArrayMessagePrototypes(unordered_map <string, MessagePrototype> array) {
-    for (auto const& mp : array) {
-        cout << mp.first << "      " << array[mp.first].type << endl;
-        
-        for (int j = 0; j < array[mp.first].address.size(); j++) {
-            cout << array[mp.first].address[j] << endl;
+// Вывод на экран ветора конфигураций сообщений
+void PrintArrayMessagePrototypes() {
+    vector<MessagePrototype> ms = arrayMessagePrototypes;
+
+
+    for (int i = 0; i < ms.size(); i++)
+    {
+        cout << ms[i].name << "      " << ms[i].type << endl;
+        //cout << ms[i].address.size() << "           " << ms[i].messageData.size() << endl;
+
+        for (int j = 0; j < ms[i].address.size(); j++) {
+            cout << ms[i].address[j] << endl;
         }
-        for (int j = 0; j < array[mp.first].messageData.size(); j++) {
-            cout << array[mp.first].messageData[j].parametrName << "      " << array[mp.first].messageData[j].parametrSize << endl;
+        for (int j = 0; j < ms[i].messageData.size(); j++) {
+            cout << ms[i].messageData[j].parametrName << "      " << ms[i].messageData[j].parametrSize << endl;
         }
+
     }
 }
 
+bool if_find(string name)
+{
+    for (int i = 0; i < arrayMessagePrototypes.size(); i++) {
+        if (arrayMessagePrototypes[i].name == name) {
+            return true;
+        }
+    }
+    return false;
+}
 
-
+MessagePrototype GetMessagePrototype(string name)
+{
+    for (int i = 0; i < arrayMessagePrototypes.size(); i++)
+    {
+        if (arrayMessagePrototypes[i].name == name) {
+            return arrayMessagePrototypes[i];
+        }
+    }
+}
 
 
 
