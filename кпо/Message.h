@@ -10,8 +10,16 @@
 
 #include <string>
 #include <vector>
+#include <tuple>
 #include "Parameter.h"
 #include "config.h"
+
+
+struct Address
+{
+    std::string address1;
+    std::string address2;
+};
 
 
 
@@ -37,8 +45,8 @@ public:
     
     
     
-    std::string MakeMessage();
 
+    //tuple<Address, string> MakeMessage();
 
     void PrintMessage();
     

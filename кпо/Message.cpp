@@ -4,7 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include <bitset>
-
+#include <tuple>
 
 
 using std::string;
@@ -17,7 +17,7 @@ using std::cerr;
 using std::cin;
 using std::endl;
 
-
+using std::tuple;
 
 
 Message::Message()
@@ -74,6 +74,38 @@ std::string Message::GetAddressOY()
         return this->addressOY[0] + this->addressOY[1];
     }
 }
+
+
+
+
+//
+//std::tuple<Address, string> Message::MakeMessage()
+//{
+//    std::tuple<Address, string> a;
+//    string str = "";
+//    if (this->typeMessage == "Eth")
+//    {
+//        for (int i = 0; i < this->parametrsArray.size(); i++)
+//        {
+//            str += this->parametrsArray[i].GetBinValue();
+//        }
+//        Address address;
+//        address.address1 = this->addressOY[0]; 
+//        address.address2 = this->addressOY[1];
+//        a = std::make_tuple(address, str);
+//    }
+//    if (this->typeMessage == "ÌÊÈÎ")
+//    {
+//        for (int i = 0; i < this->parametrsArray.size(); i++)
+//        {
+//            str += this->parametrsArray[i].GetBinValue();
+//        }
+//        Address address;
+//        address.address1 = this->addressOY[0];
+//        a = std::make_tuple(address, str);
+//    }
+//    return std::tuple<Address, string>();
+//}
 
 
 

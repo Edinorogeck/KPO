@@ -20,7 +20,7 @@ using std::vector;
 extern string MAIN_PATH;
 extern string CONFIGURATION_FILE;
 
-int CMR = 4;
+const double CMR = 4;
 
 
 
