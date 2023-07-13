@@ -20,6 +20,9 @@ using std::vector;
 extern string MAIN_PATH;
 extern string CONFIGURATION_FILE;
 
+int CMR = 4;
+
+
 
 struct ParametrData
 {
@@ -46,9 +49,7 @@ struct MessagePrototype
 
 int Configuration();
 
-
 void PrintArrayMessagePrototypes(vector<MessagePrototype> ms);
-
 
 bool if_find(string name);
 
@@ -57,9 +58,11 @@ MessagePrototype GetMessagePrototype(string name);
 
 
 
+string GetMessageName(string s);
 
+string GetMessageType(string s);
 
-
+vector<string> GetMessageAddress(string s, string type);
 
 
 

@@ -33,87 +33,6 @@ string CONFIGURATION_FILE = "Configuration_file.txt";
 vector<MessagePrototype> arrayMessagePrototypes;
 
 
-
-
-
-string GetMessageName(string s) {
-    string line;
-    std::istringstream ss(s);
-    while (getline(ss, line, ';'))
-    {
-        return line;
-    }
-}
-
-string GetMessageType(string s) {
-    string line;
-    std::istringstream ss(s);
-    vector<string> ssVector;
-    while (getline(ss, line, '.'))
-    {
-        ssVector.push_back(line);
-    }
-    return ssVector[1];
-}
-
-vector<string> GetMessageAddress(string s, string type) {
-    vector<string> address;
-    string line;
-    std::istringstream ss(s);
-    if (type == "МКИО") {
-        while (getline(ss, line, ';')) {
-            address.push_back(line);
-            return address;
-        }
-    }
-    if (type == "Eth")
-    {
-        while (getline(ss, line, ';')) {
-            address.push_back(line);
-        }
-        return address;
-    }
-}
-
-// Вывод на экран ветора конфигураций сообщений
-void PrintArrayMessagePrototypes(vector<MessagePrototype> ms) {
-    for (int i = 0; i < ms.size(); i++)
-    {
-        cout << ms[i].name << "      " << ms[i].type << endl;
-        //cout << ms[i].address.size() << "           " << ms[i].messageData.size() << endl;
-
-        for (int j = 0; j < ms[i].address.size(); j++) {
-            cout << ms[i].address[j] << endl;
-        }
-        for (int j = 0; j < ms[i].messageData.size(); j++) {
-            cout << ms[i].messageData[j].parametrName << "      " << ms[i].messageData[j].parametrSize << endl;
-        }
-
-    }
-}
-
-bool if_find(string name)
-{
-    for (int i = 0; i < arrayMessagePrototypes.size(); i++) {
-        if (arrayMessagePrototypes[i].name == name) {
-            return true;
-        }
-    }
-    return false;
-}
-
-MessagePrototype GetMessagePrototype(string name)
-{
-    for (int i = 0; i < arrayMessagePrototypes.size(); i++)
-    {
-        if (if_find(name) == true) {
-            return arrayMessagePrototypes[i];
-        }
-    }
-}
-
-
-
 int Configuration()
 {
     // Подключение рус языка
@@ -262,4 +181,88 @@ int Configuration()
 
     configurationFile.close();
 }
+
+// Вывод на экран ветора конфигураций сообщений
+void PrintArrayMessagePrototypes(vector<MessagePrototype> ms) {
+    for (int i = 0; i < ms.size(); i++)
+    {
+        cout << ms[i].name << "      " << ms[i].type << endl;
+        //cout << ms[i].address.size() << "           " << ms[i].messageData.size() << endl;
+
+        for (int j = 0; j < ms[i].address.size(); j++) {
+            cout << ms[i].address[j] << endl;
+        }
+        for (int j = 0; j < ms[i].messageData.size(); j++) {
+            cout << ms[i].messageData[j].parametrName << "      " << ms[i].messageData[j].parametrSize << endl;
+        }
+
+    }
+}
+
+bool if_find(string name)
+{
+    for (int i = 0; i < arrayMessagePrototypes.size(); i++) {
+        if (arrayMessagePrototypes[i].name == name) {
+            return true;
+        }
+    }
+    return false;
+}
+
+MessagePrototype GetMessagePrototype(string name)
+{
+    for (int i = 0; i < arrayMessagePrototypes.size(); i++)
+    {
+        if (if_find(name) == true) {
+            return arrayMessagePrototypes[i];
+        }
+    }
+}
+
+
+
+
+string GetMessageName(string s) {
+    string line;
+    std::istringstream ss(s);
+    while (getline(ss, line, ';'))
+    {
+        return line;
+    }
+}
+
+
+// Eth или МКИО
+string GetMessageType(string s) {
+    string line;
+    std::istringstream ss(s);
+    vector<string> ssVector;
+    while (getline(ss, line, '.'))
+    {
+        ssVector.push_back(line);
+    }
+    return ssVector[1];
+}
+
+vector<string> GetMessageAddress(string s, string type) {
+    vector<string> address;
+    string line;
+    std::istringstream ss(s);
+    if (type == "МКИО") {
+        while (getline(ss, line, ';')) {
+            address.push_back(line);
+            return address;
+        }
+    }
+    if (type == "Eth")
+    {
+        while (getline(ss, line, ';')) {
+            address.push_back(line);
+        }
+        return address;
+    }
+}
+
+
+
 

@@ -14,36 +14,27 @@ class Parameter
 public:
     //конструктор по умолчанию
     Parameter();
-    //конструкттор по имени параметра
-    Parameter(std::string);
-    //конструктор по имени и коду типа
-    Parameter(std::string, std::string);
-    //конструктор по имени и значению
-    Parameter(std::string, void*);
-    //конструктор копирования
-    Parameter(const Parameter& ref_Parametr);
+    //Конструктор по названию и размеру
+    Parameter(std::string, int);
+
+    //Установить значение
+    void SetValue(std::string);
+    
+    void SetValue(unsigned char* byteArray);
+
+    std::string GetValue();
+    int GetSize();
 
 
-    //-------------------------------------//
-    //        сделать(конструкторы)        //
-    //-------------------------------------//
 
-    //конструктор по имени, типу и значению
-    Parameter(std::string, std::string, void*);
+
 
 
     std::string GetParametrName();
     std::string GetParametrTypeCode();
     std::string GetBinValue();
 
-    void* GetValue();
-
-    void SetValue(void* item);
-
-    void PrintParametrName();
-    void PrintParametrTypeCode();
-    void PrintValue();
-
+    
 
 
 
@@ -54,12 +45,15 @@ private:
     std::string parametrName;
 
     //код параметра U32, I16, I8 или другие
-    std::string parametrTypeCode;
+    std::string type;
 
-    //указатель на значение параметра
-    void* value = nullptr;
+    //размер поля
+    int size;
 
-    void MakeValuePointer();
+    // Значение параметра
+    std::string value;
+
+
 
 };
 

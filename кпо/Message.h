@@ -11,32 +11,45 @@
 #include <string>
 #include <vector>
 #include "Parameter.h"
+#include "config.h"
 
 
 
 class Message
 {
 public:
-    Message(std::string);
 
-    std::string MakeMessage();
+    Message();
+    Message(MessagePrototype);
 
-    // Установить адрес ОУ 
-    void SetAddressOY(std::string);
+
+
+    void SetValues(std::string);
+
     // Вернуть адрес ОУ
     std::string GetAddressOY();
 
+
+  
+    
+    
+    
+    
+    
+    
+    std::string MakeMessage();
+
+
     void PrintMessage();
+    
+
+
+    
+
+
+
+
     ~Message();
-
-
-    // Массив параметров
-    std::vector <Parameter> parametrsArray;
-
-
-
-
-
 
 private:
     // Имя сообщения
@@ -44,11 +57,11 @@ private:
     // Тип сообщения согласно стандарту
     std::string typeMessage;
     // Адрес ОУ
-    std::string addressOY;
+    std::vector<std::string> addressOY;
+    // Массив параметров
+    std::vector <Parameter> parametrsArray;
 
 
-    // Функция создания мкио сообщения слова данных
-    std::string MakeMessageMKIO_SD();
 
 
 };
