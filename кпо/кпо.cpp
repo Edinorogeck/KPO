@@ -5,6 +5,7 @@
 #include "config.h"
 #include "Message.h"
 #include "Parameter.h"
+#include "conv_functions.cpp"
 #include <bitset>
 
 

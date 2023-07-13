@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="config.cpp" />
+    <ClCompile Include="conv_functions.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="Parameter.cpp" />
     <ClCompile Include="кпо.cpp" />

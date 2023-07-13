@@ -33,7 +33,7 @@ string CONFIGURATION_FILE = "Configuration_file.txt";
 vector<MessagePrototype> arrayMessagePrototypes;
 
 
-int Configuration()
+void Configuration()
 {
     // Подключение рус языка
     setlocale(LC_ALL, "ru_RU");
@@ -54,7 +54,6 @@ int Configuration()
     // Проверка файла на открытие
     if (!configurationFile.is_open()) {
         cout << "File not open." << endl;
-        return 1;
     }
 
     // Преобразование в кодировку win1251

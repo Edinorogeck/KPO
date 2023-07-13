@@ -20,6 +20,11 @@ using std::vector;
 extern string MAIN_PATH;
 extern string CONFIGURATION_FILE;
 
+
+
+const int negative_coding = 1;
+const double low_order_cost = 0.17;
+
 const double CMR = 4;
 
 
@@ -47,7 +52,7 @@ struct MessagePrototype
 
 
 
-int Configuration();
+void Configuration();
 
 void PrintArrayMessagePrototypes(vector<MessagePrototype> ms);
 
