@@ -1,4 +1,8 @@
-﻿  кпо.cpp
-C:\Users\gonch\Desktop\кпо\кпо\кпо.cpp(55): warning C4715: GetMessageName: значение возвращается не при всех путях выполнения
-C:\Users\gonch\Desktop\кпо\кпо\кпо.cpp(87): warning C4715: GetMessageAddress: значение возвращается не при всех путях выполнения
-  кпо.vcxproj -> C:\Users\gonch\Desktop\кпо\x64\Debug\кпо.exe
+﻿  config.cpp
+  кпо.cpp
+  Создание кода...
+C:\Users\gonch\Desktop\кпо 0.1\кпо\config.cpp(113): warning C4715: GetMessagePrototype: значение возвращается не при всех путях выполнения
+C:\Users\gonch\Desktop\кпо 0.1\кпо\config.cpp(46): warning C4715: GetMessageName: значение возвращается не при всех путях выполнения
+C:\Users\gonch\Desktop\кпо 0.1\кпо\config.cpp(76): warning C4715: GetMessageAddress: значение возвращается не при всех путях выполнения
+C:\Users\gonch\Desktop\кпо 0.1\кпо\config.cpp(264): warning C4715: Configuration: значение возвращается не при всех путях выполнения
+  кпо.vcxproj -> C:\Users\gonch\Desktop\кпо 0.1\x64\Debug\кпо.exe
