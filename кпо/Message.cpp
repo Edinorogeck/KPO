@@ -60,13 +60,6 @@ Message::Message(MessagePrototype msProto)
     }
 }
 
-
-
-
-
-
-
-
 void Message::SetValues(std::string valueStr)
 {
     std::string binary_str = "";
@@ -107,6 +100,53 @@ void Message::SetValues(vector<BYTE>& data)
     }
 }
 
+string Message::MakeOutputString()
+{
+    string str = "";
+    for (int i = 0; i < parametrsArray.size(); i++)
+    {
+        str = str + parametrsArray[i].MakeString();
+    }
+
+    return str;
+}
+
+
+
+
+
+std::tuple<vector<BYTE>, vector<string>> Message::MakeOutputTuple()
+{
+    vector<BYTE> array;
+    vector<string> address;
+
+
+    int pos = 0;
+    for (int i = 0; i < parametrsArray.size(); i++)
+    {
+        for (int j = 0; j < parametrsArray[i].GetSize() / 8; j++)
+        {
+            string str = parametrsArray[i].GetValue().substr(pos, 8);
+            pos = pos + 8;
+            std::bitset<8> bits(str);
+            array.push_back(static_cast<unsigned char>(bits.to_ulong()));
+        }
+        pos = 0;
+
+    }
+
+    address = this->addressOY;
+
+
+
+    return std::make_tuple(array, address);
+}
+
+
+
+
+
+
 std::string Message::GetAddressOY()
 {
     if (this->typeMessage == "МКИО")
@@ -119,56 +159,24 @@ std::string Message::GetAddressOY()
     }
 }
 
-
-
-
-//
-//std::tuple<Address, string> Message::MakeMessage()
-//{
-//    std::tuple<Address, string> a;
-//    string str = "";
-//    if (this->typeMessage == "Eth")
-//    {
-//        for (int i = 0; i < this->parametrsArray.size(); i++)
-//        {
-//            str += this->parametrsArray[i].GetBinValue();
-//        }
-//        Address address;
-//        address.address1 = this->addressOY[0]; 
-//        address.address2 = this->addressOY[1];
-//        a = std::make_tuple(address, str);
-//    }
-//    if (this->typeMessage == "МКИО")
-//    {
-//        for (int i = 0; i < this->parametrsArray.size(); i++)
-//        {
-//            str += this->parametrsArray[i].GetBinValue();
-//        }
-//        Address address;
-//        address.address1 = this->addressOY[0];
-//        a = std::make_tuple(address, str);
-//    }
-//    return std::tuple<Address, string>();
-//}
-
-
-
-
-
+// моя сервисная функция
 void Message::PrintMessage()
 {
     for (int i = 0; i < this->parametrsArray.size(); i++)
     {
         cout << this->parametrsArray[i].GetValue() << endl;
     }
+
+    for (int i = 0; i < this->parametrsArray.size(); i++)
+        {
+            cout << this->parametrsArray[i].MakeString() << endl;
+        }
+
 }
 
 Message::~Message()
 {
 }
-
-
-
 
 
 

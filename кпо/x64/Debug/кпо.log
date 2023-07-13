@@ -1,5 +1,2 @@
-﻿  кпо.cpp
-C:\Users\gonch\Desktop\кпо 1.0\кпо\conv_functions.cpp(21,38): warning C4554: "<<": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
-C:\Users\gonch\Desktop\кпо 1.0\кпо\conv_functions.cpp(114,40): warning C4554: "<<": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
-C:\Users\gonch\Desktop\кпо 1.0\кпо\conv_functions.cpp(119,39): warning C4554: "<<": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
-  кпо.vcxproj -> C:\Users\gonch\Desktop\кпо 1.0\x64\Debug\кпо.exe
+﻿  Message.cpp
+  кпо.vcxproj -> C:\Users\gonch\Desktop\кпо 1.2\x64\Debug\кпо.exe

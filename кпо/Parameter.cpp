@@ -79,8 +79,6 @@ void Parameter::SetValue(std::string str)
 {
     this->value = str;
 
-
-
     //long number = binaryToDecimal(str) / CMR;
     //this->value = toBinaryString(number, this->size);
 }
@@ -110,6 +108,19 @@ std::string Parameter::GetValue()
 int Parameter::GetSize()
 {
     return this->size;
+}
+
+std::string Parameter::MakeString()
+{
+    string str = "";
+    int pos = 0;
+    for (int i = 0; i < this->size / 8; i++)
+    {
+        //cout << this->value.substr(pos, 8) << endl;
+        str = str + std::string(1, static_cast<char>(std::bitset<8>(this->value.substr(pos, 8)).to_ulong()));
+        pos += 8;
+    }
+    return str;
 }
 
 
