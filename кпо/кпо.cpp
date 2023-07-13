@@ -71,4 +71,8 @@ int main()
     }
     cout << binary_str << endl;
 
+
+
+
+
 }
