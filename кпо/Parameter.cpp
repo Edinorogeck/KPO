@@ -16,39 +16,39 @@ using std::endl;
 using std::bitset;
 
 
-
-long binaryToDecimal(string binary) {
-    int decimal = 0;
-    int sign = 1;
-    if (binary[0] == '1') {
-        sign = -1;
-        // инвертируем биты
-        for (int i = 0; i < binary.length(); i++) {
-            if (binary[i] == '0') {
-                binary[i] = '1';
-            }
-            else {
-                binary[i] = '0';
-            }
-        }
-        // добавляем единицу
-        for (int i = binary.length() - 1; i >= 0; i--) {
-            if (binary[i] == '0') {
-                binary[i] = '1';
-                break;
-            }
-            else {
-                binary[i] = '0';
-            }
-        }
-    }
-    // преобразуем в десятичное число
-    for (int i = 0; i < binary.length(); i++) {
-        int bit = binary[binary.length() - 1 - i] - '0';
-        decimal += bit * pow(2, i);
-    }
-    return sign * decimal;
-}
+//
+//long binaryToDecimal(string binary) {
+//    int decimal = 0;
+//    int sign = 1;
+//    if (binary[0] == '1') {
+//        sign = -1;
+//        // инвертируем биты
+//        for (int i = 0; i < binary.length(); i++) {
+//            if (binary[i] == '0') {
+//                binary[i] = '1';
+//            }
+//            else {
+//                binary[i] = '0';
+//            }
+//        }
+//        // добавляем единицу
+//        for (int i = binary.length() - 1; i >= 0; i--) {
+//            if (binary[i] == '0') {
+//                binary[i] = '1';
+//                break;
+//            }
+//            else {
+//                binary[i] = '0';
+//            }
+//        }
+//    }
+//    // преобразуем в десятичное число
+//    for (int i = 0; i < binary.length(); i++) {
+//        int bit = binary[binary.length() - 1 - i] - '0';
+//        decimal += bit * pow(2, i);
+//    }
+//    return sign * decimal;
+//}
 
 string toBinaryString(long n, int size) {
     bitset<32> bits(n);

@@ -22,7 +22,7 @@ using std::vector;
 extern string MAIN_PATH;
 extern string CONFIGURATION_FILE;
 
-const double CMR = 4;
+int CMR = 4;
 
 
 
@@ -32,13 +32,6 @@ struct ParametrData
     string parametrSize;
 };
 
-struct MessagePrototype
-{
-    string name;
-    string type;
-    vector<string> address;
-    vector<ParametrData> messageData;
-};
 
 
 

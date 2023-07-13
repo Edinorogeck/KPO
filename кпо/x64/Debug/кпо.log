@@ -1,4 +1,149 @@
-﻿Message.obj : error LNK2005: "class std::unordered_map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct MessagePrototype,struct std::hash<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,struct std::equal_to<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,struct MessagePrototype> > > arrayMessagePrototypes" (?arrayMessagePrototypes@@3V?$unordered_map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UMessagePrototype@@U?$hash@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@U?$equal_to@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UMessagePrototype@@@std@@@2@@std@@A) уже определен в config.obj
-Parameter.obj : error LNK2005: "class std::unordered_map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct MessagePrototype,struct std::hash<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,struct std::equal_to<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,struct MessagePrototype> > > arrayMessagePrototypes" (?arrayMessagePrototypes@@3V?$unordered_map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UMessagePrototype@@U?$hash@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@U?$equal_to@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UMessagePrototype@@@std@@@2@@std@@A) уже определен в config.obj
-кпо.obj : error LNK2005: "class std::unordered_map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct MessagePrototype,struct std::hash<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,struct std::equal_to<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,struct MessagePrototype> > > arrayMessagePrototypes" (?arrayMessagePrototypes@@3V?$unordered_map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UMessagePrototype@@U?$hash@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@U?$equal_to@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UMessagePrototype@@@std@@@2@@std@@A) уже определен в config.obj
-C:\Users\gonch\Desktop\кпо 0.4\x64\Debug\кпо.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
+﻿  config.cpp
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,24): error C2065: MessagePrototype: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,1): error C2923: std::unordered_map: "MessagePrototype" не является допустимым аргументом типа шаблон для параметра "_Ty"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,24): message : см. объявление "MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,1): error C2976: std::unordered_map: слишком мало аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2641: Не удается вывести аргументы шаблона для "std::unordered_map".
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2783: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(void)": не удается вывести аргумент шаблон для "_Kty"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(105,5): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2783: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(void)": не удается вывести аргумент шаблон для "_Ty"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(105,5): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2780: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc>)": ожидаются аргументы 1 — 0 предоставлены
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,57): error C2065: MessagePrototype: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,34): error C2923: std::unordered_map: "MessagePrototype" не является допустимым аргументом типа шаблон для параметра "_Ty"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,57): message : см. объявление "MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,34): error C2976: std::unordered_map: слишком мало аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,75): error C2955: "std::unordered_map": для использования класс шаблон требуется список аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(51,37): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(51,18): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "GetMessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(75,26): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "ms"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(75,26): error C2065: ms: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(110,9): error C2065: ms: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(111,9): error C2065: ms: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(111,61): error C2065: ms: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(111,22): error C2660: GetMessageAddress: функция не принимает 1 аргументов
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(60,16): message : см. объявление "GetMessageAddress"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(111,22): message : при попытке сопоставить список аргументов "(_Ty)"
+          with
+          [
+              _Ty=std::string
+          ]
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(124,13): error C2065: ms: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(129,40): error C2065: ms: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(173,34): error C2923: std::unordered_map: "MessagePrototype" не является допустимым аргументом типа шаблон для параметра "_Ty"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(51,1): message : см. объявление "MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(173,34): error C2976: std::unordered_map: слишком мало аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(173,75): error C2955: "std::unordered_map": для использования класс шаблон требуется список аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): error C2672: "begin": не найдена соответствующая перегруженная функция
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1534,27): message : может быть "_Ty *std::begin(_Ty (&)[_Size]) noexcept"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : '_Ty *std::begin(_Ty (&)[_Size]) noexcept': не удалось вывести аргумент шаблон для '_Ty (&)[_Size]' из 'std::unordered_map'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1516,30): message : или       "unknown-type std::begin(const _Container &) noexcept(<expr>)"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : Сбой при специализации функции-шаблона "unknown-type std::begin(const _Container &) noexcept(<expr>)"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : Со следующими аргументами шаблона:
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : "_Container=std::unordered_map"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1510,30): message : или       "unknown-type std::begin(_Container &) noexcept(<expr>)"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : Сбой при специализации функции-шаблона "unknown-type std::begin(_Container &) noexcept(<expr>)"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : Со следующими аргументами шаблона:
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : "_Container=std::unordered_map"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\initializer_list(55,35): message : или       "const _Elem *std::begin(std::initializer_list<_Elem>) noexcept"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': не удалось вывести аргумент шаблон для 'std::initializer_list<_Elem>' из 'std::unordered_map'
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): error C2672: "end": не найдена соответствующая перегруженная функция
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1539,27): message : может быть "_Ty *std::end(_Ty (&)[_Size]) noexcept"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : '_Ty *std::end(_Ty (&)[_Size]) noexcept': не удалось вывести аргумент шаблон для '_Ty (&)[_Size]' из 'std::unordered_map'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1528,30): message : или       "unknown-type std::end(const _Container &) noexcept(<expr>)"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : Сбой при специализации функции-шаблона "unknown-type std::end(const _Container &) noexcept(<expr>)"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : Со следующими аргументами шаблона:
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : "_Container=std::unordered_map"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xutility(1522,30): message : или       "unknown-type std::end(_Container &) noexcept(<expr>)"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : Сбой при специализации функции-шаблона "unknown-type std::end(_Container &) noexcept(<expr>)"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : Со следующими аргументами шаблона:
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : "_Container=std::unordered_map"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\initializer_list(60,35): message : или       "const _Elem *std::end(std::initializer_list<_Elem>) noexcept"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,27): message : 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': не удалось вывести аргумент шаблон для 'std::initializer_list<_Elem>' из 'std::unordered_map'
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,34): error C3536: <begin>$L0: не может использоваться до инициализации
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,34): error C3536: <end>$L0: не может использоваться до инициализации
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.cpp(174,32): error C2100: недопустимое косвенное обращение
+  Message.cpp
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,24): error C2065: MessagePrototype: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,1): error C2923: std::unordered_map: "MessagePrototype" не является допустимым аргументом типа шаблон для параметра "_Ty"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,24): message : см. объявление "MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,1): error C2976: std::unordered_map: слишком мало аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2641: Не удается вывести аргументы шаблона для "std::unordered_map".
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2783: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(void)": не удается вывести аргумент шаблон для "_Kty"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(105,5): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2783: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(void)": не удается вывести аргумент шаблон для "_Ty"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(105,5): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2780: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc>)": ожидаются аргументы 1 — 0 предоставлены
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,57): error C2065: MessagePrototype: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,34): error C2923: std::unordered_map: "MessagePrototype" не является допустимым аргументом типа шаблон для параметра "_Ty"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,57): message : см. объявление "MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,34): error C2976: std::unordered_map: слишком мало аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,75): error C2955: "std::unordered_map": для использования класс шаблон требуется список аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(51,37): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(51,18): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "GetMessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Message.h(31,13): error C2460: Message::MessagePrototype: использует "Message", определяемый в настоящий момент
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Message.h(26,7): message : см. объявление "Message"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Message.cpp(27,10): error C7550: "Message::{ctor}": полное имя в этом контексте называет конструктор, а не тип.
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Message.cpp(27,18): error C2597: недопустимая ссылка на нестатический член "Message::MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Message.h(31,13): message : см. объявление "Message::MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Message.cpp(27,35): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "msProto"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Message.cpp(28,1): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Message.cpp(28,1): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+  Parameter.cpp
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,24): error C2065: MessagePrototype: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,1): error C2923: std::unordered_map: "MessagePrototype" не является допустимым аргументом типа шаблон для параметра "_Ty"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,24): message : см. объявление "MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,1): error C2976: std::unordered_map: слишком мало аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2641: Не удается вывести аргументы шаблона для "std::unordered_map".
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2783: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(void)": не удается вывести аргумент шаблон для "_Kty"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(105,5): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2783: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(void)": не удается вывести аргумент шаблон для "_Ty"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(105,5): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2780: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc>)": ожидаются аргументы 1 — 0 предоставлены
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,57): error C2065: MessagePrototype: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,34): error C2923: std::unordered_map: "MessagePrototype" не является допустимым аргументом типа шаблон для параметра "_Ty"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,57): message : см. объявление "MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,34): error C2976: std::unordered_map: слишком мало аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,75): error C2955: "std::unordered_map": для использования класс шаблон требуется список аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(51,37): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(51,18): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "GetMessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Parameter.cpp(80,19): error C3861: binaryToDecimal: идентификатор не найден
+  кпо.cpp
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,24): error C2065: MessagePrototype: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,1): error C2923: std::unordered_map: "MessagePrototype" не является допустимым аргументом типа шаблон для параметра "_Ty"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,24): message : см. объявление "MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,1): error C2976: std::unordered_map: слишком мало аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2641: Не удается вывести аргументы шаблона для "std::unordered_map".
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2783: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(void)": не удается вывести аргумент шаблон для "_Kty"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(105,5): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2783: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(void)": не удается вывести аргумент шаблон для "_Ty"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(105,5): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(38,42): error C2780: "std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc> std::unordered_map(std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc>)": ожидаются аргументы 1 — 0 предоставлены
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,57): error C2065: MessagePrototype: необъявленный идентификатор
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,34): error C2923: std::unordered_map: "MessagePrototype" не является допустимым аргументом типа шаблон для параметра "_Ty"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,57): message : см. объявление "MessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,34): error C2976: std::unordered_map: слишком мало аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(49,75): error C2955: "std::unordered_map": для использования класс шаблон требуется список аргументов шаблон
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\unordered_map(67,1): message : см. объявление "std::unordered_map"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(51,37): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Users\gonch\Desktop\кпо 0.5\кпо\config.h(51,18): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "GetMessagePrototype"
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Message.h(31,13): error C2460: Message::MessagePrototype: использует "Message", определяемый в настоящий момент
+C:\Users\gonch\Desktop\кпо 0.5\кпо\Message.h(26,7): message : см. объявление "Message"
+  Создание кода...
