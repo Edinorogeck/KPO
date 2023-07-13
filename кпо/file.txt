@@ -1,0 +1,12 @@
+Configuration_folder/Âõ.ÌÊÈÎ.15.csv
+Configuration_folder/Âõ.ÌÊÈÎ.1.csv
+Configuration_folder/Âõ.ÌÊÈÎ.2.csv
+Configuration_folder/Âõ.ÌÊÈÎ.3.csv
+Configuration_folder/Âõ.ÌÊÈÎ.4.csv
+Configuration_folder/Èñõ.ÌÊÈÎ.1.csv
+Configuration_folder/Èñõ.ÌÊÈÎ.2.csv
+Configuration_folder/Èñõ.ÌÊÈÎ.3.csv
+Configuration_folder/Èñõ.ÌÊÈÎ.4.csv
+Configuration_folder/Èñõ.ÌÊÈÎ.5.csv
+Configuration_folder/Âõ.Eth.1.csv
+Configuration_folder/Èñõ.Eth.1.csv
